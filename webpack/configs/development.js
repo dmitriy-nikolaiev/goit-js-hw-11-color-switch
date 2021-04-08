@@ -29,7 +29,7 @@ module.exports = env => ({
     historyApiFallback: true,
     compress: true,
     port: 4040,
-    noInfo: true,
+    noInfo: false,
     quiet: false,
     clientLogLevel: 'warn',
     stats: 'minimal',

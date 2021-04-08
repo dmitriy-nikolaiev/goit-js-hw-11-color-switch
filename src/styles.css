@@ -1,0 +1,49 @@
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  transition: color 150ms var(--timing-function),
+    background-color 150ms var(--timing-function);
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.button {
+  color: #fff;
+  background-color: blueviolet;
+  border: 0;
+  outline: 0;
+  padding: 8px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.05);
+  transition: background-color 250ms var(--timing-function);
+}
+
+.button:not(:last-child) {
+  margin-right: 20px;
+}
+
+.button:hover {
+  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.15);
+  background-color: darkviolet;
+}
+
+.button[disabled] {
+  background-color: darkgrey;
+}
+.button[disabled]:hover {
+  cursor: not-allowed;
+}

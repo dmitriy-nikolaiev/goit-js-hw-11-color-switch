@@ -1,13 +1,5 @@
 import './styles.css';
-
-const colors = [
-  '#FFFFFF',
-  '#2196F3',
-  '#4CAF50',
-  '#FF9800',
-  '#009688',
-  '#795548',
-];
+import colors from './colorsData';
 
 const bodyRef = document.body;
 const startBtnRef = bodyRef.querySelector('[data-action="start"]');

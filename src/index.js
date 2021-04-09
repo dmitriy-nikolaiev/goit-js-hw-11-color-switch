@@ -8,7 +8,8 @@ const randomIntegerFromInterval = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-let timerId;
+let timerId = null;
+
 const renderStart = () => {
   timerId = setInterval(() => {
     bodyRef.style.backgroundColor =
@@ -18,13 +19,12 @@ const renderStart = () => {
 };
 
 bodyRef.addEventListener('click', event => {
-  const action = event.target.dataset.action;
-  if (action === 'start' && !timerId) {
-    // if (action === 'start') {
+  // if (action === 'start' && !timerId) {
+  if (event.target.dataset.action === 'start') {
     renderStart();
-  } else if (action === 'stop') {
+  } else if (event.target.dataset.action === 'stop') {
     clearInterval(timerId);
     startBtnRef.disabled = false;
-    timerId = undefined;
+    // timerId = null;
   }
 });

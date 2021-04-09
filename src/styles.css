@@ -10,8 +10,7 @@
 
 body {
   margin: 0;
-  transition: color 150ms var(--timing-function),
-    background-color 150ms var(--timing-function);
+  transition: background-color 150ms var(--timing-function);
 }
 
 .toolbar {
@@ -27,6 +26,7 @@ body {
   outline: 0;
   padding: 8px 10px;
   border-radius: 4px;
+  font-size: 20px;
   cursor: pointer;
   box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.05);
   transition: background-color 250ms var(--timing-function);
@@ -41,9 +41,9 @@ body {
   background-color: darkviolet;
 }
 
-.button[disabled] {
+.button:disabled {
   background-color: darkgrey;
 }
-.button[disabled]:hover {
+.button:disabled:hover {
   cursor: not-allowed;
 }
